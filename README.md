@@ -1,6 +1,3 @@
-Sure, here's a README.md template for your GitHub repository:
-
-```markdown
 # Scoop Script
 
 This repository contains a PowerShell script for setting up Scoop, a command-line installer for Windows. The script automates the installation of various packages using Scoop, making it easier to set up your development or everyday use environment on a new Windows machine.
@@ -37,4 +34,3 @@ Before running the script, ensure you have the following installed:
 - You can customize the `$mainBucket`, `$extrasBucket`, `$gamesBucket`, and `$nerdFontsBucket` arrays in the script to include or exclude specific packages based on your preferences.
 - Modify the `$scoopBuckets` array to add or remove additional Scoop buckets.
 - Feel free to extend or modify the script to suit your specific needs.
-```
