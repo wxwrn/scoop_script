@@ -75,6 +75,17 @@ function installNerdFonts {
     scoop install $nerdFontsBucket
 }
 
+
+function listBuckets {
+    $scoopBuckets 
+}
+function listPackages {
+    $mainBucket
+    $extrasBucket
+    $gamesBucket
+    $nerd_fontsBucket
+}
+
 function installPackages {
     installMain
     installExtras
@@ -103,8 +114,7 @@ function menu {
     
     Write-Host "Number of packages:" $pkgNum 
     Write-Host "1: List all packages"
-    Write-Host "2: Check for availability of selected packages"
-    Write-Host "3: Install packages"
+    Write-Host "2: Install packages"
     Write-Host "Q: Press 'Q' to quit."
 }
 
@@ -112,8 +122,8 @@ function menu {
 
 
 # !!!!!!!!!!!!!!!!!!
-# addBuckets
-# scoop install main/aria2
+addBuckets
+scoop install main/aria2
 
 
 
@@ -128,19 +138,16 @@ do {
             writeoutGreen 'You chose option #1'
             writeoutGreen 'Listing all packages'
 
+            listPackages
+
 
         } '2' {
             Clear-Host
 
             writeoutGreen 'You chose option #2' 
-            writeoutGreen 'Checking for availability of selected packages' 
-
-
-        } '3' {
-            Clear-Host
-
-            writeoutGreen 'You chose option #3' 
             writeoutGreen 'Installing packages' 
+
+            installPackages
 
             
         } 'q' {
@@ -150,10 +157,3 @@ do {
     pause
 }
 until ($input -eq 'q')
-
-# $scoopBuckets
-# $mainBucket
-# $extrasBucket
-# $gamesBucket
-# $nerd_fontsBucket
-
