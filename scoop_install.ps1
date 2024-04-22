@@ -27,7 +27,7 @@ $mainBucket = @(
 
 $extrasBucket = @(
     'extras/firefox',
-    'extras/brave',
+    # 'extras/brave',
     'extras/vlc',
     'extras/notepadplusplus',
     'extras/bitwarden',
