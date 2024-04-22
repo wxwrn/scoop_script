@@ -7,7 +7,7 @@ This repository contains a PowerShell script for setting up Scoop, a command-lin
 Before running the script, ensure you have the following installed:
 
 - Windows PowerShell
-- [Scoop](https://scoop.sh/) (if not installed, the script will automatically install Scoop for you)
+- [Scoop](https://scoop.sh/)
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
