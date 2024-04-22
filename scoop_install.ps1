@@ -121,7 +121,7 @@ function menu {
 
 
 
-# !!!!!!!!!!!!!!!!!!
+# !!!!!!!!!!!!!!!!!! VERY IMPORTANTE!!!!!!!
 addBuckets
 scoop install main/aria2
 
