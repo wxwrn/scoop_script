@@ -92,13 +92,16 @@ function writeoutGreen {
     
 }
 
+$pkgNum = $mainBucket.Count + $extrasBucket.Count + $gamesBucket.Count + $nerd_fontsBucket.Count
+
 function menu {
     param (
         [string]$Title = "scoop script"
     )
     Clear-Host
     Write-Host "================ $Title ================"
-       
+    
+    Write-Host "Number of packages:" $pkgNum 
     Write-Host "1: List all packages"
     Write-Host "2: Check for availability of selected packages"
     Write-Host "3: Install packages"
@@ -115,38 +118,38 @@ function menu {
 
 
     
-# do {
-#     menu
-#     $input = Read-Host "Please make a selection"
-#     switch ($input) {
-#         '1' {
-#             Clear-Host
+do {
+    menu
+    $input = Read-Host "Please make a selection"
+    switch ($input) {
+        '1' {
+            Clear-Host
            
-#             writeoutGreen 'You chose option #1'
-#             writeoutGreen 'Listing all packages'
+            writeoutGreen 'You chose option #1'
+            writeoutGreen 'Listing all packages'
 
 
-#         } '2' {
-#             Clear-Host
+        } '2' {
+            Clear-Host
 
-#             writeoutGreen 'You chose option #2' 
-#             writeoutGreen 'Checking for availability of selected packages' 
+            writeoutGreen 'You chose option #2' 
+            writeoutGreen 'Checking for availability of selected packages' 
 
 
-#         } '3' {
-#             Clear-Host
+        } '3' {
+            Clear-Host
 
-#             writeoutGreen 'You chose option #3' 
-#             writeoutGreen 'Installing packages' 
+            writeoutGreen 'You chose option #3' 
+            writeoutGreen 'Installing packages' 
 
             
-#         } 'q' {
-#             return
-#         }
-#     }
-#     pause
-# }
-# until ($input -eq 'q')
+        } 'q' {
+            return
+        }
+    }
+    pause
+}
+until ($input -eq 'q')
 
 # $scoopBuckets
 # $mainBucket
@@ -154,6 +157,3 @@ function menu {
 # $gamesBucket
 # $nerd_fontsBucket
 
-# $num = $mainBucket.Count + $extrasBucket.Count + $gamesBucket.Count + $nerd_fontsBucket.Count
-
-# $num
