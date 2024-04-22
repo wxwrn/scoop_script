@@ -14,63 +14,53 @@ function addBuckets {
     }
 }
 
-
-
-
-
-
-$browsers = @(
-    'firefox',
-    'brave'
+$mainBucket = @(
+    'main/7zip',
+    'main/neovim',
+    'main/ripgrep',
+    'main/git',
+    'main/gh',
+    'main/fd',
+    'main/fzf',
+    'main/helix'
 )
 
-$programs = @(
-    'vlc',
-    'notepadplusplus',
-    'bitwarden',
-    'chocolateygui',
-    'syncthingtray',
-    'spotify',
-    'vscode',
-    'qbittorrent',
-    'neovim',
-    'steam',
-    'bulk-crap-uninstaller',
-    'naps2'
-
+$extrasBucket = @(
+    'extras/firefox',
+    'extras/brave',
+    'extras/vlc',
+    'extras/notepadplusplus',
+    'extras/bitwarden',
+    'extras/syncthingtray',
+    'extras/spotify',
+    'extras/vscode',
+    'extras/qbittorrent',
+    'extras/bulk-crap-uninstaller',
+    'extras/naps2',
+    'extras/powertoys',
+    'extras/ventoy',
+    'extras/everything',
+    'extras/lazygit',
+    'extras/hwinfo',
+    'extras/sophiapp',
+    'extras/wiztree',
+    'extras/f.lux',
+    'extras/kdeconnect',
+    'extras/vesktop',
+    'extras/fancontrol'
 )
 
-$tools = @(
-    '7zip',
-    'ripgrep',
-    'powertoys',
-    'syncthing',
-    'powertoys',
-    'git',
-    'gh',
-    'ventoy',
-    'fd',
-    'fzf',
-    'everything',
-    'lazygit',
-    'hwinfo',
-    'sophiapp',
-    'wiztree',
-    'f.lux',
-    'kdeconnect-kde'
-
+$gamesBucket = @(
+    'games/steam'
 )
 
-$fonts = @(
-    'nerd-fonts-jetbrainsmono',
-    'nerd-fonts-firacode'
+$nerd_fontsBucket = @(
+    'nerd-fonts/JetBrainsMono-NF',
+    'nerd-fonts/FiraCode-NF'
 )
 
-$wingetPackages = @(
-    'Vencord.Vesktop',
-    'Helix.Helix',
-    'Rem0o.FanControl'
-)
+
+
 
 function searchBrowsers {
 
