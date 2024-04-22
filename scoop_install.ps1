@@ -54,12 +54,33 @@ $gamesBucket = @(
     'games/steam'
 )
 
-$nerd_fontsBucket = @(
+$nerdFontsBucket = @(
     'nerd-fonts/JetBrainsMono-NF',
     'nerd-fonts/FiraCode-NF'
 )
 
+function installMain {
+    scoop install $mainBucket
+}
 
+function installExtras {
+    scoop install $extrasBucket
+}
+
+function installGames {
+    scoop install $gamesBucket
+}
+
+function installNerdFonts {
+    scoop install $nerdFontsBucket
+}
+
+function installPackages {
+    installMain
+    installExtras
+    installGames
+    installNerdFonts
+}
 
 
 function writeoutGreen {
@@ -73,7 +94,7 @@ function writeoutGreen {
 
 function menu {
     param (
-        [string]$Title = "choco script"
+        [string]$Title = "scoop script"
     )
     Clear-Host
     Write-Host "================ $Title ================"
@@ -84,38 +105,55 @@ function menu {
     Write-Host "Q: Press 'Q' to quit."
 }
 
-scoop install main/aria2
+
+
+
+# !!!!!!!!!!!!!!!!!!
+# addBuckets
+# scoop install main/aria2
+
+
+
     
-do {
-    menu
-    $input = Read-Host "Please make a selection"
-    switch ($input) {
-        '1' {
-            Clear-Host
+# do {
+#     menu
+#     $input = Read-Host "Please make a selection"
+#     switch ($input) {
+#         '1' {
+#             Clear-Host
            
-            writeoutGreen 'You chose option #1'
-            writeoutGreen 'Listing all packages'
+#             writeoutGreen 'You chose option #1'
+#             writeoutGreen 'Listing all packages'
 
 
-        } '2' {
-            Clear-Host
+#         } '2' {
+#             Clear-Host
 
-            writeoutGreen 'You chose option #2' 
-            writeoutGreen 'Checking for availability of selected packages' 
+#             writeoutGreen 'You chose option #2' 
+#             writeoutGreen 'Checking for availability of selected packages' 
 
 
-        } '3' {
-            Clear-Host
+#         } '3' {
+#             Clear-Host
 
-            writeoutGreen 'You chose option #3' 
-            writeoutGreen 'Installing packages' 
+#             writeoutGreen 'You chose option #3' 
+#             writeoutGreen 'Installing packages' 
 
             
-        } 'q' {
-            return
-        }
-    }
-    pause
-}
-until ($input -eq 'q')
+#         } 'q' {
+#             return
+#         }
+#     }
+#     pause
+# }
+# until ($input -eq 'q')
 
+# $scoopBuckets
+# $mainBucket
+# $extrasBucket
+# $gamesBucket
+# $nerd_fontsBucket
+
+# $num = $mainBucket.Count + $extrasBucket.Count + $gamesBucket.Count + $nerd_fontsBucket.Count
+
+# $num
