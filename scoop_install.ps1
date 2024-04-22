@@ -62,60 +62,6 @@ $nerd_fontsBucket = @(
 
 
 
-function searchBrowsers {
-
-    foreach ($browser in $browsers) {
-        Write-Host $browser
-        choco search -e $browser
-    }
-}
-
-
-function searchTools {
-
-    foreach ($tool in $tools) {
-        Write-Host $tool
-        choco search -e $tool
-    }
-}
-
-function searchPrograms {
-
-    foreach ($program in $programs) {
-        Write-Host $program
-        choco search -e $program
-    }
-}
-
-function searchFonts {
-
-    foreach ($font in $fonts) {
-        Write-Host $font
-        choco search -e $font
-    }
-    
-}
-
-function searchPackages {
-    searchBrowsers
-    searchTools
-    searchPrograms
-    searchFonts
-}
-
-function installPackages {
-    choco install -y $fonts
-    choco install -y $browsers
-    choco install -y $tools
-    choco install -y $programs
-}
-
-function installWingetPackages {
-
-    winget install $wingetPackages
-    
-}
-
 function writeoutGreen {
     param (
         [string]$text
@@ -149,11 +95,7 @@ do {
            
             writeoutGreen 'You chose option #1'
             writeoutGreen 'Listing all packages'
-            
-            $fonts
-            $browsers
-            $programs
-            $tools
+
 
         } '2' {
             Clear-Host
@@ -161,7 +103,6 @@ do {
             writeoutGreen 'You chose option #2' 
             writeoutGreen 'Checking for availability of selected packages' 
 
-            searchPackages
 
         } '3' {
             Clear-Host
@@ -169,8 +110,6 @@ do {
             writeoutGreen 'You chose option #3' 
             writeoutGreen 'Installing packages' 
 
-            installPackages
-            installWingetPackages
             
         } 'q' {
             return
