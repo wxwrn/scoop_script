@@ -47,6 +47,9 @@ $extrasBucket = @(
     'extras/f.lux',
     'extras/kdeconnect',
     'extras/vesktop',
+    'extras/altsnap',
+    'extras/sharex',
+    'extras/superf4',
     'extras/fancontrol'
 )
 
