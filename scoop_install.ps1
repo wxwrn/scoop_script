@@ -125,6 +125,7 @@ function menu {
 
 
 # !!!!!!!!!!!!!!!!!! VERY IMPORTANTE!!!!!!!
+scoop install main/git
 addBuckets
 scoop install main/aria2
 
