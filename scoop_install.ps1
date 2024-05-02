@@ -18,7 +18,7 @@ $mainBucket = @(
     'main/7zip',
     'main/neovim',
     'main/ripgrep',
-    'main/git',
+    #'main/git',
     'main/gh',
     'main/fd',
     'main/fzf',
