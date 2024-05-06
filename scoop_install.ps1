@@ -1,7 +1,3 @@
-# for scoop.sh download aria2 package for multi-connection downloads
-# scoop install aria2
-
-
 $scoopBuckets = @(
     'extras',
     'games',
