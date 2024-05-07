@@ -17,9 +17,10 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ## Usage
 
 1. Clone this repository to your local machine.
-2. Open Windows PowerShell with administrative privileges.
+2. Open Windows PowerShell.
 3. Navigate to the directory where the script is located.
-4. Run the script by entering `.\scoop_script.ps1`.
+4. Run this command `Set-ExecutionPolicy Bypass -Scope Process`
+5. Run the script by entering `.\scoop_script.ps1`.
 
 ## Features
 
