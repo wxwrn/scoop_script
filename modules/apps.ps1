@@ -7,7 +7,8 @@ $mainBucket = @(
     'main/gh',
     'main/fd',
     'main/fzf',
-    'main/helix'
+    'main/helix',
+    'main/tlrc'
 )
 
 $extrasBucket = @(
